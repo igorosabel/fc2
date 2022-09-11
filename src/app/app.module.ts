@@ -7,12 +7,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { PAGES, COMPONENTS, SERVICES } from 'src/app/app.common';
+import { DetailComponent } from './pages/detail/detail.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
 		...PAGES,
-		...COMPONENTS
+		...COMPONENTS,
+  DetailComponent
 	],
 	imports: [
 		BrowserModule,

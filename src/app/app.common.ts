@@ -12,7 +12,11 @@ export const PAGES: any[] = [
 /**
  * Componentes parciales
  */
-export const COMPONENTS: any[] = [];
+import { MapPortionComponent } from 'src/app/components/map-portion/map-portion.component';
+
+export const COMPONENTS: any[] = [
+	MapPortionComponent
+];
 
 /**
  * Servicios

@@ -1,1 +1,3 @@
-<p>main works!</p>
+<div class="row" *ngFor="let row of map.rows">
+	<app-map-portion *ngFor="let item of row" [grid]="item"></app-map-portion>
+</div>

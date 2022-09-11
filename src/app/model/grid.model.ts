@@ -13,6 +13,10 @@ export class Grid {
 		public diamonds: Diamond[] = []
 	) {}
 
+	get image(): string {
+		return '/assets/maps/' + this.map + '-' + this.gridRow + '-' + this.gridCol + '.png';
+	}
+
 	fromInterface(g: GridInterface): Grid {
 		this.id = g.id;
 		this.map = g.map;

@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 
 import { PAGES, COMPONENTS, SERVICES } from 'src/app/app.common';
 import { DetailComponent } from './pages/detail/detail.component';
+import { MapPortionComponent } from './components/map-portion/map-portion.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
 		...PAGES,
 		...COMPONENTS,
-  DetailComponent
+  DetailComponent,
+  MapPortionComponent
 	],
 	imports: [
 		BrowserModule,

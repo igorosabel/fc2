@@ -20,3 +20,7 @@ export interface DiamondsResult {
 	status: string;
 	list: GridInterface[];
 }
+
+export interface StatusResult {
+	status: string;
+}

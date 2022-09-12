@@ -1,1 +1,10 @@
-<img [src]="grid.image">
+<div class="container">
+	<div class="map-label" [ngClass]="{'completed': grid.completed}">{{grid.picked}} / {{grid.num}}</div>
+	<img class="map-image" [src]="grid.image">
+	<img *ngFor="let diamond of grid.diamonds"
+	     [ngStyle]="{'top': diamond.lat + 'px', 'left': diamond.lon + 'px'}"
+		 class="diamond"
+		 [src]="'/assets/diamond'+(diamond.picked ? '-picked' : '')+'.svg'"
+		 (click)="selectDiamond(diamond)"
+	>
+</div>

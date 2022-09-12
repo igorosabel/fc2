@@ -6,6 +6,7 @@ export class Map {
 	constructor() {}
 
 	load(grids: Grid[]): void {
+		this.reset();
 		for (let grid of grids) {
 			let ind = grid.gridRow -1;
 			if (!this.rows[ind]) {
@@ -13,5 +14,9 @@ export class Map {
 			}
 			this.rows[ind].push(grid);
 		}
+	}
+
+	reset(): void {
+		this.rows = [];
 	}
 }

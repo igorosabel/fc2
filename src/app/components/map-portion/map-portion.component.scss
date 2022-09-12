@@ -1,0 +1,30 @@
+.container {
+	display: inline-block;
+    width: 340px;
+    height: 340px;
+	position: relative;
+
+	.map-label {
+		position: absolute;
+		background-color: #000;
+		padding: 4px;
+		border: 1px solid #fff;
+		top: 5px;
+		left: 5px;
+
+		&.completed {
+			border: 1px solid #f00;
+			color: #f00;
+		}
+	}
+
+	.map-image {
+		width: 340px;
+	}
+
+	.diamond {
+		position: absolute;
+		z-index: 1;
+		cursor: pointer;
+	}
+}

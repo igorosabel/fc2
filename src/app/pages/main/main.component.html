@@ -1,3 +1,16 @@
-<div class="row" *ngFor="let row of map.rows">
-	<app-map-portion *ngFor="let item of row" [grid]="item"></app-map-portion>
+<header>
+	<div class="title">Far Cry 2</div>
+	<div class="maps">
+		<select name="maps-select" [(ngModel)]="selectedMap" (change)="updateMap()">
+			<option [value]="null">Elige mapa</option>
+			<option value="n">Norte</option>
+			<option value="s">Sur</option>
+		</select>
+	</div>
+</header>
+
+<div class="map">
+	<div class="row" *ngFor="let row of map.rows">
+		<app-map-portion *ngFor="let item of row" [grid]="item" (diamondSelectEvent)="diamondSelect($event)"></app-map-portion>
+	</div>
 </div>

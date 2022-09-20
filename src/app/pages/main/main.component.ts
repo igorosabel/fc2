@@ -4,6 +4,7 @@ import { ClassMapperService } from 'src/app/services/class-mapper.service';
 import { Grid } from 'src/app/model/grid.model';
 import { Map } from 'src/app/model/map.model';
 import { Diamond } from 'src/app/model/diamond.model';
+import { GridAndDiamondInterface } from 'src/app/interfaces/interfaces';
 
 @Component({
 	selector: 'app-main',
@@ -44,11 +45,10 @@ export class MainComponent implements OnInit {
 		}
 	}
 
-	diamondSelect(diamond: Diamond): void {
-		console.log(diamond);
-		this.as.updateDiamond(diamond.id).subscribe(result => {
+	diamondSelect(gridAndDiamond: GridAndDiamondInterface): void {
+		this.as.updateDiamond(gridAndDiamond.diamond).subscribe(result => {
 			if (result.status === 'ok') {
-				diamond.picked = !diamond.picked;
+				this.map.check(gridAndDiamond);
 			}
 			else {
 				alert('¡Ocurrió un error al actualizar el diamante!');

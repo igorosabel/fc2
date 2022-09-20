@@ -24,3 +24,8 @@ export interface DiamondsResult {
 export interface StatusResult {
 	status: string;
 }
+
+export interface GridAndDiamondInterface {
+	grid: number;
+	diamond: number;
+}
